@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SettingsService } from './services/service.index';
-
+declare function init_plugins();
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,4 +9,8 @@ import { SettingsService } from './services/service.index';
 export class AppComponent {
   title = 'proyecto';
   constructor( public _ajustes: SettingsService) {}
+
+  ngOnInit() {
+    init_plugins();
+  }
 }

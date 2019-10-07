@@ -1,3 +1,12 @@
 #themecolors a {
     cursor: pointer;
 }
+
+.background-overlay {
+    position: absolute;
+    background: rgba(83, 92, 104, .4);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}

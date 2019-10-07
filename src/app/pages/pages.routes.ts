@@ -17,17 +17,17 @@ const pagesRoutes: Routes = [
    path: '',
    component: PagesComponent,
     children: [
-      { path: 'admin', component: DashboardComponent},
-      { path: 'archives', component: ArchivesComponent},
-      { path: 'coments', component: ComentsComponent},
-      { path: 'create-page', component: CreatePageComponent},
-      { path: 'images', component: ImagesComponent},
-      { path: 'posts', component: PostsComponent},
-      { path: 'principal', component: PrincipalComponent},
-      { path: 'templates', component: TemplatesComponent},
-      { path: 'users', component: UsuariosComponent},
-      { path: 'videos', component: VideosComponent},
-      { path: 'account-settings', component: AccountSettingsComponent},
+      { path: 'admin', component: DashboardComponent, data: {titulo: 'Admin', padre: 'Principal'}},
+      { path: 'archives', component: ArchivesComponent, data: {titulo: 'Archivos', padre: 'Archivos'}},
+      { path: 'coments', component: ComentsComponent, data: {titulo: 'Comentarios', padre: 'Paginas'}},
+      { path: 'create-page', component: CreatePageComponent, data: {titulo: 'Crear Pagina', padre: 'Paginas'}},
+      { path: 'images', component: ImagesComponent, data: {titulo: 'Imagenes', padre: 'Archivos'}},
+      { path: 'posts', component: PostsComponent, data: {titulo: 'Posts', padre: 'Paginas'}},
+      { path: 'principal', component: PrincipalComponent, data: {titulo: 'Pagina Principal', padre: ''}},
+      { path: 'templates', component: TemplatesComponent, data: {titulo: 'Plantillas', padre: 'Temas'}},
+      { path: 'users', component: UsuariosComponent, data: {titulo: 'Usuarios', padre: 'Principal'}},
+      { path: 'videos', component: VideosComponent, data: {titulo: 'Videos', padre: 'Archivos'}},
+      { path: 'account-settings', component: AccountSettingsComponent, data: {titulo: 'Configuracion', padre: 'Temas'}},
       { path: '', redirectTo: '/admin', pathMatch: 'full'}
    ]
   }
