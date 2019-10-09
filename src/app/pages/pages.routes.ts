@@ -1,3 +1,4 @@
+import { LoginGuardGuard } from './../services/service.index';
 import { TemplatesComponent } from './templates/templates.component';
 import { ImagesComponent } from './images/images.component';
 import { CreatePageComponent } from './create-page/create-page.component';
@@ -16,6 +17,7 @@ const pagesRoutes: Routes = [
  {
    path: '',
    component: PagesComponent,
+   canActivate:[LoginGuardGuard],
     children: [
       { path: 'admin', component: DashboardComponent, data: {titulo: 'Admin', padre: 'Principal'}},
       { path: 'archives', component: ArchivesComponent, data: {titulo: 'Archivos', padre: 'Archivos'}},

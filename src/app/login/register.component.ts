@@ -1,9 +1,11 @@
+import { Usuario } from './../models/usuario.model';
 
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 import { UsuarioService } from './../services/service.index';
+import { Router } from '@angular/router';
 
 
 declare function init_plugins();
@@ -13,10 +15,11 @@ declare function init_plugins();
   styleUrls: ['./login.component.css']
 })
 export class RegisterComponent implements OnInit {
-  
+
 
   forma: FormGroup;
-  constructor(public usuarioService: UsuarioService
+  constructor(public usuarioService: UsuarioService,
+              public router: Router
     ) { }
 
   iguales(group: FormGroup) {
@@ -54,8 +57,17 @@ export class RegisterComponent implements OnInit {
       return;
     }
 
+    const usuario = new Usuario(
+      this.forma.value.nombre,
+      this.forma.value.correo,
+      this.forma.value.password
+    );
 
-    console.log(this.forma.value);
+    this.usuarioService.crearUsuario(usuario)
+   .subscribe(res => {
+     this.router.navigate(['login']);
+   });
+
   }
 
 }
