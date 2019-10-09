@@ -17,6 +17,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
 
+// temporal
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +30,8 @@ import { RegisterComponent } from './login/register.component';
     ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
     PagesModule,
     AppRoutingModule,
     ServiceModule

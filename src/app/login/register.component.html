@@ -5,32 +5,40 @@
     <div class="login-register" style="background-image:url(/assets/images/fondo.jpg);">
         <div class="login-box card">
             <div class="card-body">
-                <form class="form-horizontal form-material" id="loginform" action="index.html">
+                <form ngNativeValidate [formGroup]="forma" (ngSubmit)="registrarUsuario()" class="form-horizontal form-material" id="loginform" action="index.html">
                     <h3 class="box-title m-b-20">Registro</h3>
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <input class="form-control" type="text" required="" placeholder="Nombre">
+                            <input formControlName="nombre" name="nombre" class="form-control" type="text" require placeholder="Nombre">
                         </div>
                     </div>
                     <div class="form-group ">
                         <div class="col-xs-12">
-                            <input class="form-control" type="text" required="" placeholder="Correo">
+                            <input formControlName="correo" name="correo" class="form-control" type="email" required placeholder="Correo">
                         </div>
                     </div>
                     <div class="form-group ">
                         <div class="col-xs-12">
-                            <input class="form-control" type="password" required="" placeholder="Contrasenia">
+                            <input formControlName="password" name="password" class="form-control" type="password" required placeholder="Contrasenia">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <input class="form-control" type="password" required="" placeholder="Confirmar contrasenia">
+                            <input formControlName="password2" name="password2" class="form-control" type="password" required placeholder="Confirmar contrasenia">
                         </div>
                     </div>
+
+                    <div class="form-group" *ngIf="forma.errors?.iguales && forma.pristine">
+                        <p class="text-danger">
+                            Las contraseñas deben de ser iguales
+                        </p>
+                    </div>
+
+
                     <div class="form-group row">
                         <div class="col-md-12">
                             <div class="checkbox checkbox-success p-t-0">
-                                <input id="checkbox-signup" type="checkbox" class="filled-in chk-col-light-blue">
+                                <input formControlName="condiciones" name="condiciones" id="checkbox-signup" type="checkbox" class="filled-in chk-col-light-blue">
                                 <label for="checkbox-signup"> Acepto todos los<a href="javascript:void(0)">Términos</a></label>
                             </div>
                         </div>
