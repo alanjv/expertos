@@ -12,5 +12,6 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     init_plugins();
   }
+  
 
 }

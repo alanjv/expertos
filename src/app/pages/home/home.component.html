@@ -1,1 +1,121 @@
-<p>home works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
+    <div class="container">
+        <a class="navbar-brand" onclick="features()" href="#header">
+            <img src="assets/images/logo.png" width="30" height="30" class="d-inline-block align-top rounded" alt=""> Quickly
+
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                            </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" onclick="features()" href="https://github.com/alanjv?tab=repositories">Descargar </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="features()">Caracteristicas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="features()">Sobre Nosostros</a>
+                </li>
+
+
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" [routerLink]="['/login']">Iniciar Sesion </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/register']">Registrarse</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- Header -->
+<header id="header" class="main-header text-center">
+    <div class="background-overlay text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 prin">
+                    <h1 id="principal">Crea sitios de manera fácil y rápida</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, porro.</p>
+                    <a href="https://github.com/alanjv?tab=repositories" class="btn btn-info btn-lg text-white">Descargar</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--Caracteristicas-->
+
+<section id="caracteristicas">
+    <div class="container">
+        <h1 class="text-center">Caracteristicas</h1>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="assets/images/clock.png" class="card-img-top h-25 w-25">
+                        <h4>Ahorro de tiempo</h4>
+                        <p>Te permite crear tu sitio en pocos minutos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card ">
+                    <div class="card-body text-center">
+                        <img src="assets/images/usar.png" class="card-img-top h-25 w-25">
+                        <h3>Facil de usar</h3>
+                        <p>Te permite crear tu sitio en pocos minutos</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="assets/images/paleta.png" class="card-img-top h-25 w-25">
+                        <h3>Diseño adaptable</h3>
+                        <p>Tu sitio se adecua a distintos tamaños</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card ">
+                    <div class="card-body text-center">
+                        <img src="assets/images/comunidad.png" class="card-img-top h-25 w-25">
+                        <h3>Gran comunidad</h3>
+                        <p>Te permite crear tu sitio en pocos minutos</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--Sobre Nosotros-->
+<section id="about" class="bg-light text-center">
+    <div class="container">
+        <div class="row">
+            <div class="m-5">
+                <h3>Por qué Quickly?</h3>
+                <p>Quickly genera páginas web dinámicas interactuando con el servidor web para generar la página web bajo petición del usuario, con el formato predefinido y el contenido extraído de la base de datos del servidor.</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container p-3 text-white text-center">
+        <p>Copyright &copy; 2019</p>
+    </div>
+</footer>

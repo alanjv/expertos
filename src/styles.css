@@ -11,6 +11,39 @@
     height: 100vh;
 }
 
+body {
+    font-family: 'Sanchez', serif !important;
+}
+
+.navbar {
+    box-shadow: 2px 2px 5px #2d3136;
+    opacity: .9;
+    background: #2c2a2d
+}
+
+.navbar-dark {
+    background: #2c2a2d !important
+}
+
+.navbar .nav-item .nav-link {
+    color: #ffffff
+}
+
+#principal {
+    margin-top: 10rem;
+    font-size: 3.5rem;
+    color: #ffffff;
+}
+
+.main-header {
+    position: relative;
+    background: url(assets/images/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    height: 100vh;
+}
+
 .pointer {
     cursor: pointer;
 }
@@ -39,4 +72,16 @@
     width: 100%;
     height: 100%;
     z-index: 9999;
+}
+
+#caracteristicas .card:hover {
+    background-color: #5ca8b5
+}
+
+footer {
+    background: #393638 !important;
+}
+
+.btn-des {
+    color: #5ca8b5;
 }

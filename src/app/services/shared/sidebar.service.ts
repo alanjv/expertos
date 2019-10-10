@@ -9,7 +9,7 @@ export class SidebarService {
     titulo: 'principal',
     icono:  'mdi mdi-gauge',
     submenu: [
-      {titulo: 'admin', url: '/admin'},
+      {titulo: 'admin', url: '/principal'},
       {titulo: 'usuarios', url: '/users'}
     ]
   }, {
