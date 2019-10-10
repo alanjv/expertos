@@ -20,6 +20,7 @@ import { TemplatesComponent } from './templates/templates.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         ComentsComponent,
         TemplatesComponent,
         AccountSettingsComponent,
-        ProfileComponent
+        ProfileComponent,
+        ModalUploadComponent
     ],
     exports: [
         DashboardComponent,

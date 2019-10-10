@@ -18,7 +18,7 @@ const pagesRoutes: Routes = [
  {
    path: '',
    component: PagesComponent,
-   canActivate:[LoginGuardGuard],
+   canActivate: [LoginGuardGuard],
     children: [
       { path: 'admin', component: DashboardComponent, data: {titulo: 'Admin', padre: 'Principal'}},
       { path: 'archives', component: ArchivesComponent, data: {titulo: 'Archivos', padre: 'Archivos'}},

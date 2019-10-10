@@ -17,7 +17,6 @@ export class BreadcrumnsComponent implements OnInit {
 
     this.getDataRoute()
     .subscribe(data => {
-      console.log(data);
       this.titulo = data.titulo;
       this.padre = data.padre;
       this.title.setTitle(this.titulo);
