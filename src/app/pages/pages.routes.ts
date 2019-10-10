@@ -12,6 +12,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { VideosComponent } from './videos/videos.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const pagesRoutes: Routes = [
  {
@@ -30,6 +31,7 @@ const pagesRoutes: Routes = [
       { path: 'users', component: UsuariosComponent, data: {titulo: 'Usuarios', padre: 'Principal'}},
       { path: 'videos', component: VideosComponent, data: {titulo: 'Videos', padre: 'Archivos'}},
       { path: 'account-settings', component: AccountSettingsComponent, data: {titulo: 'Configuracion', padre: 'Temas'}},
+      { path: 'profile', component: ProfileComponent, data: {titulo: 'Perfil de Usuario', padre: 'Home'}},
       { path: '', redirectTo: '/admin', pathMatch: 'full'}
    ]
   }

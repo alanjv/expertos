@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
       this.usuarioService.loginGoogle(token).subscribe(() => {
         window.location.href = '#/admin';
       });
-      
+
     });
   }
 
