@@ -1,0 +1,53 @@
+<div class="row animated fadeIn">
+    <div class="col-12">
+        <div class="card">
+            <div class="card">
+                <div class="card-boy">
+                    <input #input (keyup)="buscarCategoria(input.value)" type="text" class="form-control" placeholder="Buscar categoria...">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="text-right">
+                    <button (click)="crearCategoria()" type="button" class="btn waves-effect waves-light btn-rounded btn-primary">
+                            <i class="fa fa-plus"></i>Crear Categoria</button>
+                </div>
+
+                <h3 class="card-tittle">Categorias registradas ( <small>{{categoriaService.totalCategorias}}</small> ) </h3>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Categoria</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let categoria of categorias">
+                            <td>
+                                <input [(ngModel)]="categoria.nombreCategoria" type="text" class="form-control" placeholder="nombre categoria">
+                            </td>
+                            <td>
+                                <button (click)="guardarCategoria(categoria)" class="btn btn-success">
+                                                    <i class="fa fa-save    "></i>
+                                                </button>
+                                <button (click)="borarCategoria(categoria)" class="btn btn-danger ml-5">
+                                                        <i class="fa fa-trash    "></i>
+                                                    </button>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

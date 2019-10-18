@@ -1,0 +1,84 @@
+<div class="row animated fadeIn">
+
+    <div class="col-md-6">
+        <div class="card card-body">
+            <h3 class="box-title m-b-0">{{post.titulo}}</h3>
+
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <form #f="ngForm" ngNativeValidate (ngSubmit)="guardarPost(f)">
+                        <div class="form-group">
+                            <label>Titulo</label>
+                            <input [(ngModel)]="post.titulo" type="text" class="form-control" name="titulo" id="titulo" placeholder="Ingrese el titulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Autor</label>
+                            <input [(ngModel)]="post.autor" type="tsxt" class="form-control" id="autor" name="autor" placeholder="Ingrese el autor" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Contenido</label>
+                            <textarea [(ngModel)]="post.contenido" name="contenido" id="contenido" class="form-control" cols="30" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Seleccione Categoria</label>
+                            <select [(ngModel)]="post.categoria" name="categoria" id="categoria" class="form-control" required>
+                                <option value="">Seleccione una Categoria</option>    
+                                <option *ngFor="let categoria of categorias" [value]="categoria._id">{{categoria.nombreCategoria}}</option>          
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Tipo</label>
+                            <div class="form-check">
+                                <label class="custom-control custom-radio">
+                                        <input (change)="tipoSeleccionedo($event.target.value)" id="rt1" name="tipo" type="radio" checked="" class="custom-control-input" value="Publico">
+                                        <span class="custom-control-indicator"></span>
+                                        <span class="custom-control-description"><i class="fa fa-globe"></i> Publico</span>
+                                    </label>
+                                <label class="custom-control custom-radio">
+                                        <input (change)="tipoSeleccionedo($event.target.value)" id="rt2" name="tipo" type="radio" class="custom-control-input"value="Privado">
+                                        <span class="custom-control-indicator"></span>
+                                        <span class="custom-control-description"><i class="fa fa-lock"></i> Privado</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Comentarios</label>
+                            <div class="form-check">
+                                <label class="custom-control custom-radio">
+                                        <input (change)="comentarSeleccionedo($event.target.value)" id="rc1" name="comentar" type="radio" checked="" class="custom-control-input" value="Si">
+                                        <span class="custom-control-indicator"></span>
+                                        <span class="custom-control-description">Si</span>
+                                    </label>
+                                <label class="custom-control custom-radio">
+                                        <input (change)="comentarSeleccionedo($event.target.value)"  id="rc2" name="comentar" type="radio" class="custom-control-input" value="No">
+                                        <span class="custom-control-indicator"></span>
+                                        <span class="custom-control-description">No</span>
+                                    </label>
+                            </div>
+                        </div>
+
+
+                        <button class="btn btn-success">
+                                        <i class="fa fa-save "> Guardar</i>
+                                    </button>
+                        <a [routerLink]="['/posts']" class="btn btn-danger ml-5">
+                                            Cancelar
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card card-body" *ngIf="post._id">
+
+            <h4 class="box-title m-b-0">Imagen</h4>
+            <img (click)="cambiarFoto()" [src]="post.img | imagen:'post'" class="img-fluid pointer">
+        </div>
+    </div>
+
+
+</div>

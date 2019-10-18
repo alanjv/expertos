@@ -24,9 +24,11 @@ export class SidebarService {
     titulo: 'Paginas',
     icono:  'mdi mdi-book-multiple-variant',
     submenu: [
+      {titulo: 'Categorias', url: '/categories'},
       {titulo: 'Crear', url: '/create-page'},
       {titulo: 'Posts', url: '/posts'},
       {titulo: 'Comentarios', url: '/coments'}
+      
     ]
   }, {
     titulo: 'Temas',

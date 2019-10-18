@@ -1,3 +1,4 @@
+import { CategoriasComponent } from './categorias/categorias.component';
 import { LoginGuardGuard } from './../services/service.index';
 import { TemplatesComponent } from './templates/templates.component';
 import { ImagesComponent } from './images/images.component';
@@ -13,6 +14,7 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { VideosComponent } from './videos/videos.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { ProfileComponent } from './profile/profile.component';
+import { PostComponent } from './posts/post.component';
 
 const pagesRoutes: Routes = [
  {
@@ -26,12 +28,14 @@ const pagesRoutes: Routes = [
       { path: 'create-page', component: CreatePageComponent, data: {titulo: 'Crear Pagina', padre: 'Paginas'}},
       { path: 'images', component: ImagesComponent, data: {titulo: 'Imagenes', padre: 'Archivos'}},
       { path: 'posts', component: PostsComponent, data: {titulo: 'Posts', padre: 'Paginas'}},
+      { path: 'post/:id', component: PostComponent, data: {titulo: 'Post', padre: 'Paginas'}},
       { path: 'principal', component: PrincipalComponent, data: {titulo: 'Pagina Principal', padre: ''}},
       { path: 'templates', component: TemplatesComponent, data: {titulo: 'Plantillas', padre: 'Temas'}},
       { path: 'users', component: UsuariosComponent, data: {titulo: 'Usuarios', padre: 'Principal'}},
       { path: 'videos', component: VideosComponent, data: {titulo: 'Videos', padre: 'Archivos'}},
       { path: 'account-settings', component: AccountSettingsComponent, data: {titulo: 'Configuracion', padre: 'Temas'}},
       { path: 'profile', component: ProfileComponent, data: {titulo: 'Perfil de Usuario', padre: 'Home'}},
+      { path: 'categories', component: CategoriasComponent, data: {titulo: 'Categorias', padre: 'Paginas'}},
       { path: '', redirectTo: '/admin', pathMatch: 'full'}
    ]
   }
